@@ -17,3 +17,12 @@
     </v-col>
   </v-row>
 </template>
+
+<script>
+
+export default {
+  head: {
+    title: 'About Me'
+  }
+}
+</script>
