@@ -101,6 +101,16 @@
 
     <v-row class="mt-8" justify="center" cols="12">
 
+      <v-col>
+        <div align="center">
+          <v-img
+            width="50%"
+            :src="require('../../static/pictures/programmer.svg')"
+            contain
+          />
+        </div>
+      </v-col>
+
       <v-col
         sm="6"
         xs="12"
@@ -109,21 +119,14 @@
         style="justify-content: center"
       >
 
-        <div align="center">
-          <v-img
-            width="50%"
-            :src="require('../../static/pictures/programmer.svg')"
-            contain
-          />
-        </div>
-
         <h1
           style="
             font-family: 'Roboto'; 
-            font-weight: 400;
+            font-weight: 500;
             font-size: 2em;
             letter-spacing: 4px;
           "
+          class="mb-1"
         >
           {{Header1}}
         </h1>
@@ -140,6 +143,36 @@
           {{Header1Subtitle}}
         </p>
 
+        <h1
+          style="
+            font-family: 'Roboto'; 
+            font-weight: 400;
+            font-size: 1.5em;
+            letter-spacing: 4px;
+          "
+        >
+          {{Header1SubHeader}}
+        </h1>
+
+        <ul
+          style="
+            list-style-type: none;
+          "
+        >
+          <li v-for="language in languages" :key="language.name">
+            <h3
+              style="
+                font-family: 'Roboto'; 
+                font-weight: 400;
+                font-size: 1em;
+                letter-spacing: 4px;
+              "
+            >
+              {{language.name}}
+            </h3>
+          </li>
+        </ul>
+
       </v-col>
       
       <v-col
@@ -149,20 +182,19 @@
         class="text-center"
       >
 
-        <div align="center">
+        <!-- <div align="center">
           <v-img
             width="50%"
             :src="require('../../static/pictures/finish.svg')"
             contain
           />
-        </div>
+        </div> -->
 
         <h1
           style="
             font-family: 'Roboto'; 
-            font-weight: 400;
+            font-weight: 500;
             font-size: 2em;
-            letter-spacing: 4px;
           "
         >
           {{Header2}}
@@ -174,11 +206,40 @@
             font-weight: 300;
             font-size: 18px;
             letter-spacing: 1.7px;
-            line-height: 32px;
           "
         >
           {{Header2Subtitle}}
         </p>
+
+        <h1
+          style="
+            font-family: 'Roboto'; 
+            font-weight: 400;
+            font-size: 1.5em;
+            letter-spacing: 4px;
+          "
+        >
+          {{Header2SubHeader}}
+        </h1>
+
+        <ul
+          style="
+            list-style-type: none;
+          "
+        >
+          <li v-for="website in websites" :key="website.site">
+            <h3
+              style="
+                font-family: 'Roboto'; 
+                font-weight: 400;
+                font-size: 1em;
+                letter-spacing: 4px;
+              "
+            >
+              {{website.site}}
+            </h3>
+          </li>
+        </ul>
 
       </v-col>
           
@@ -200,7 +261,6 @@
               font-size: 3em;
               letter-spacing: 4px;
             "
-            
           >
             {{ProjectsHeader}}
           </v-card-title>
@@ -249,13 +309,29 @@ import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loade
       AboutMeText: "Since beginning my journey as a freelance designer nearly 10 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.",
 
       Header1: "Programmer",
-      Header2: "Leader",
+      Header2: "Website Developer",
 
-      Header1Subtitle: "I enjoy creating tools that will help people",
-      Header2Subtitle: "I have been a leader in many projects",
+      Header1Subtitle: "",
+      Header2Subtitle: "",
+
+      Header1SubHeader: "Languages",
+      Header2SubHeader: "Websites",
 
       ProjectsHeader: "Projects",
       ProjectsSubHeader: "I have taken part in many projects, here are some of them",
+
+      languages: [
+        {name:"C++ / C#"},
+        {name:"Javascript"},
+        {name:"Vue JS"},
+        {name:"Dotnet Framework"},
+      ],
+
+      websites: [
+        {site: "INRIX"},
+        {site: "Panteix"},
+        {site: "This Website"},
+      ]
     }),
   }
 </script>
