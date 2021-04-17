@@ -278,6 +278,21 @@
           >
             {{ProjectsSubHeader}}
           </v-card-text>
+
+          <v-row 
+            justify="center"
+          >
+            <v-cols 
+              v-for="project in projects" :key="project.name"
+              justify="center"
+              align="center"
+              class="text-center"
+            >
+              <projectCard />
+            </v-cols>
+
+          </v-row>
+
         </v-card>
     </v-row>
 
@@ -287,9 +302,14 @@
 
 <script>
 import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+import projectCard from '../../static/objects/projectCard.vue'
 
   export default {
     name: 'Home',
+
+    components:{
+      projectCard,
+    },
 
     icons: {
       iconfont: 'mdi'
@@ -331,6 +351,12 @@ import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loade
         {site: "INRIX"},
         {site: "Panteix"},
         {site: "This Website"},
+      ],
+
+      projects: [
+        {name: "test", text: "text", link: "link"},
+        {name: "test", text: "text", link: "link"},
+        {name: "test", text: "text", link: "link"},
       ]
     }),
   }
