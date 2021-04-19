@@ -31,7 +31,7 @@
           {{Title}}
         </h2>
 
-        <v-container class="mt-2">
+        <v-container class="mt-6">
           <v-row justify="center">
             <v-col v-for="button in buttons" :key="button.name">
               <v-btn
@@ -69,6 +69,7 @@
           height="auto"
           width="100%"
           class="text-center justify-center rounded-lg"
+          flat
         >
           <v-card-title
             class="text-center justify-center white--text mt-12 mb-5"
@@ -99,7 +100,7 @@
         </v-card>
     </v-row>
 
-    <v-row class="mt-8" justify="center" cols="12">
+    <v-row class="mt-8" justify="center" align="cetner" cols="12">
 
       <v-col>
         <div align="center">
@@ -115,6 +116,7 @@
         sm="6"
         xs="12"
         justify="center"
+        align="center"
         class="text-center"
         style="justify-content: center"
       >
@@ -179,6 +181,7 @@
         sm="6"
         xs="12"
         justify="center"
+        align="center"
         class="text-center"
       >
 
@@ -252,6 +255,7 @@
           height="auto"
           width="100%"
           class="text-center justify-center rounded-lg"
+          flat
         >
           <v-card-title
             class="text-center justify-center white--text mt-12 mb-5"
@@ -280,15 +284,19 @@
           </v-card-text>
 
           <v-row 
+            cols="12"
+            class="mb-12"
             justify="center"
           >
             <v-cols 
-              v-for="project in projects" :key="project.name"
-              justify="center"
-              align="center"
-              class="text-center"
+              v-for="project in projects" 
+              :key="project.name"
             >
-              <projectCard />
+              <projectCard 
+                :title="project.name" 
+                :text="project.text"
+                :image="project.image"
+              />
             </v-cols>
 
           </v-row>
@@ -348,15 +356,30 @@ import projectCard from '../../static/objects/projectCard.vue'
       ],
 
       websites: [
-        {site: "INRIX"},
-        {site: "Panteix"},
-        {site: "This Website"},
+        {site: "INRIX Scorecard"},
+        {site: "Panteix.com"},
+        {site: "AidanMackey.net"},
       ],
 
       projects: [
-        {name: "test", text: "text", link: "link"},
-        {name: "test", text: "text", link: "link"},
-        {name: "test", text: "text", link: "link"},
+        {
+          name: "Panterix.com", 
+          text: "Panterix", 
+          link: "link",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+        },
+        {
+          name: "INRIX Scorecard", 
+          text: "INRIX", 
+          link: "link",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+        },
+        {
+          name: "AidanMackey.net", 
+          text: "AidanMakcey.net", 
+          link: "link",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+        },
       ]
     }),
   }
