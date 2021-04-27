@@ -50,7 +50,7 @@
         </v-col>
 
         <v-col sm="6" xs="12">
-          <v-img :src="require('../../static/pictures/man.svg')" contain />
+          <v-img :src="require('../../static/pictures/manCOLOR.svg')" contain />
         </v-col>
       </v-row>
 
@@ -94,7 +94,7 @@
           <div align="center">
             <v-img
               width="50%"
-              :src="require('../../static/pictures/programmer.svg')"
+              :src="require('../../static/pictures/programmerCOLOR.svg')"
               contain
             />
           </div>
@@ -282,7 +282,7 @@
           md="8"
           sm="12"
         >
-          <v-img :src="require('../../static/pictures/finish.svg')" contain />
+          <v-img :src="require('../../static/pictures/finishCOLOR.svg')" contain />
         </v-col>
       </v-row>
     </v-container>
@@ -441,14 +441,14 @@ export default {
         image:
           require('../../static/pictures/Cards/InspirometerCard.png'),
       },
-      {
-        name: "temp2",
-        text: "Temporary",
-        button: "",
-        link: "link",
-        image:
-          require('../../static/pictures/Cards/tempCard.png')
-      },
+      // {
+      //   name: "temp2",
+      //   text: "Temporary",
+      //   button: "",
+      //   link: "link",
+      //   image:
+      //     require('../../static/pictures/Cards/tempCard.png')
+      // },
     ],
 
     footerHeading: "Get connected with me!",
