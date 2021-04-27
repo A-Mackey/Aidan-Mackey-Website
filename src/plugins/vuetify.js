@@ -14,7 +14,7 @@ export default new Vuetify({
         dark: darkMode,
         themes: {
             light: {
-                primary: "#1B4353",
+                primary: "#3F2D76",
                 secondary: "#FFFFFF",
                 accent: colors.shades.black,
                 error: colors.red.accent3,
