@@ -1,13 +1,17 @@
 <template>
   <v-app>
     <!-- Could add 'app' to make it scroll witth page -->
-    <v-app-bar color="primary" dark>
+    <v-app-bar color="primary" light>
+      <v-spacer />
+
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          :src="
+            require('../static/pictures/favicon_ioLOGO/apple-touch-icon.png')
+          "
           transition="scale-transition"
           width="40"
         />
@@ -17,21 +21,12 @@
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
+          :src="require('../static/pictures/AidanMackeyHeaderWHITE.png')"
+          width="200"
         />
       </div>
 
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-spacer />
     </v-app-bar>
 
     <v-main>
