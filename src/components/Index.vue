@@ -344,7 +344,7 @@ export default {
       {
         name: "linkedIn",
         icon: "mdi-linkedin",
-        color: "blue",
+        color: "#2867B2",
         secondaryColor: "white",
         link: "https://www.linkedin.com/in/aidanmackey/",
       },
