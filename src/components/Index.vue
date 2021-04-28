@@ -470,7 +470,3 @@ export default {
   }),
 };
 </script>
-
-<style lang="scss">
-@import "../../static/shared.scss";
-</style>
