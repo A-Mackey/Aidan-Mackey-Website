@@ -1,10 +1,7 @@
 <template>
   <v-app>
     <!-- Could add 'app' to make it scroll witth page -->
-    <v-app-bar
-      color="primary"
-      dark
-    >
+    <v-app-bar color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -38,16 +35,16 @@
     </v-app-bar>
 
     <v-main>
-      <Index/>
+      <Index />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Index from './components/Index';
+import Index from "./components/Index";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     Index,
@@ -58,3 +55,11 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+html,
+body,
+#app {
+  overflow-x: hidden;
+}
+</style>

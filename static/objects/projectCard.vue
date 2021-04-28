@@ -1,11 +1,11 @@
 <template>
   <v-container>
     <v-hover v-slot:default="{ hover }">
-      <v-card 
-        class="ma-4"
-        color="grey lighten-4" 
-        height="150px" 
-        width="300"
+      <v-card
+        class="mb-6"
+        color="grey lighten-4"
+        :width="width"
+        :height="(1 / 2) * width"
         style="border-radius: 15px"
       >
         <v-img :aspect-ratio="16 / 9" :src="image">
@@ -28,30 +28,30 @@
             >
               <v-row cols="12" justify="center" align="center">
                 <v-col lg="8">
-                  
-                  <h3 style="
-                  font-family: 'Roboto'; 
-                  font-weight: 300;
-                  font-size: 0.25em;
-                  letter-spacing: 2px;
-                  line-height: 25px;
-                ">
-                  {{text}}
-                </h3>
+                  <h3
+                    style="
+                      font-family: 'Roboto'; 
+                      font-weight: 300;
+                      font-size: 0.25em;
+                      letter-spacing: 2px;
+                      line-height: 25px;
+                    "
+                    class="ml-4 mr-4"
+                  >
+                    {{ text }}
+                  </h3>
 
-
-                  <v-btn 
-                    rounded 
-                    color="white" 
+                  <v-btn
+                    rounded
+                    color="white"
                     outlined
                     :href="link"
                     target="_blank"
                   >
-                    {{button}}
+                    {{ button }}
                   </v-btn>
                 </v-col>
               </v-row>
-              
             </div>
           </v-fade-transition>
           <h2
@@ -87,6 +87,7 @@ export default {
     link: String,
     image: String,
     button: String,
+    width: Number,
   },
 
   data: () => ({}),
