@@ -394,7 +394,7 @@ export default {
 
     websites: [
       { site: "INRIX Scorecard" },
-      { site: "Panteix.com" },
+      { site: "Panterix.com" },
       { site: "AidanMackey.net" },
     ],
 
