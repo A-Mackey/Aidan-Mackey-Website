@@ -431,7 +431,7 @@ export default {
         name: "AidanMackey.net",
         text: "Developer of this website!",
         button: "GitHub Repo",
-        link: "",
+        link: "https://github.com/A-Mackey/Aidan-Mackey-Website",
         image: require("../../static/pictures/Cards/AidanMackeyCard.png"),
       },
       {
