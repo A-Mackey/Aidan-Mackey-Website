@@ -439,7 +439,7 @@ export default {
         text: "Panterix research paper publushed at GoodTechs confrance.",
         button: "Read Here",
         link: "https://dl.acm.org/doi/abs/10.1145/3411170.3411269",
-        image: require("../../static/pictures/Cards/tempCard.png"),
+        image: require("../../static/pictures/Cards/PublishedPaperCard.png"),
       },
     ],
 
