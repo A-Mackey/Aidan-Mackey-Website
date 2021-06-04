@@ -97,10 +97,10 @@
         class="mb-8"
       >
         <v-card-title
-            class="text-center justify-center black--text mt-12 mb-5"
+            class="text-center justify-center black--text mt-12 mb-5 text-wrap"
             :class=" isExtraSmall() ? 'roadMapTitleXS' : 'roadMapTitle'"
           >
-            My Work Experience
+            {{RoadMapHeader}}
           </v-card-title>
       </v-card>
 
@@ -461,6 +461,8 @@ export default {
     AboutMeText:
       "Thank you for visiting my website! Since beginning my journey as a programmer in high school, I have worked with school IT departments, startups, and big tech companies; as well as worked along side many talented individuals that have helped me to grow in my teamwork and programming skills. I have become quite skilled in Full-Stack Website Development, Software Engineering, and Development Operations. I am a very hardworking person and am always looking for new technologies to learn.",
 
+
+    RoadMapHeader: "My Experience",
     Roadmap: [
       { 
         job: "Santa Margarita High School", 
@@ -589,12 +591,14 @@ export default {
 
 <style scoped>
   .roadMapTitleXS {
+    word-wrap: break-word;
     font-family: 'Roboto'; 
-    font-weight: 400;
-    font-size: 2em;
+    font-weight: 500;
+    font-size: 2.25em;
   }
 
   .roadMapTitle {
+    word-wrap: break-word;
     font-family: 'Roboto'; 
     font-weight: 400;
     font-size: 3em;
