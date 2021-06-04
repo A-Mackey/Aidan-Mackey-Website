@@ -79,7 +79,7 @@
 import "@mdi/font/css/materialdesignicons.css"; // Ensure you are using css-loader
 
 export default {
-  name: "Project Card",
+  name: "ProjectCard",
 
   props: {
     title: String,

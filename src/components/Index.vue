@@ -50,10 +50,11 @@
         </v-col>
 
         <v-col sm="6" xs="12">
-          <v-img :src="require('../../static/pictures/manCOLOR.svg')" contain />
+          <v-img :src="require('../../static/pictures/programmerCOLOR.svg')" contain />
         </v-col>
       </v-row>
 
+      <!-- About Me -->
       <v-row class="mt-8">
         <v-card
           color="primary"
@@ -89,13 +90,91 @@
         </v-card>
       </v-row>
 
+      <!-- My Roadmap -->
+
+      <v-card
+        flat
+        class="mb-8"
+      >
+        <v-card-title
+            class="text-center justify-center black--text mt-12 mb-5"
+            style="
+                font-family: 'Roboto'; 
+                font-weight: 400;
+                font-size: 3em;
+              "
+          >
+            My Work Experience
+          </v-card-title>
+      </v-card>
+
+      <v-row cols="12" v-for="job, i in Roadmap" :key="i">
+
+        <v-col v-if="(i+1)%2 == 0 && !isExtraSmall()" cols="0" sm="6" md="6" lg="6" xl="6">
+        
+          <v-row align="center" no-gutters justify="center" style="height: 100%">
+            <h1
+              class="text-center align-center"
+              style="
+                font-family: 'Roboto'; 
+                font-weight: 600;
+                font-size: 2.25em;
+                vertical-align: middle;
+                color: #3F2D76;
+              "
+            >
+            {{job.when}}
+            </h1>
+          </v-row>  
+        
+        </v-col>
+          
+        <v-divider
+          v-if="(i+1)%2 == 0 && !isExtraSmall()"
+          class=""
+          vertical
+        ></v-divider>
+
+        <v-col cols="12" sm="6" md="6" lg="6" xl="6">
+          <v-card
+            flat
+          >
+            <Job :title="job.job" :subTitle="job.title" :text="job.info" :left="(i+1)%2 == 0"/>
+          </v-card>
+        </v-col>
+
+        <v-divider
+          v-if="(i)%2 == 0 && !isExtraSmall()"
+          class=""
+          vertical
+        ></v-divider>
+
+        <v-col v-if="(i)%2 == 0 && !isExtraSmall()" cols="0" sm="6" md="6" lg="6" xl="6" >
+          <v-row align="center" no-gutters justify="center" style="height: 100%">
+            <h1
+              class="text-center align-center"
+              style="
+                font-family: 'Roboto'; 
+                font-weight: 600;
+                font-size: 2.25em;
+                vertical-align: middle;
+                color: #3F2D76;
+              "
+            >
+            {{job.when}}
+            </h1>
+          </v-row>
+        </v-col>
+
+      </v-row>
+
       <!-- Languages & Websites Row -->
-      <v-row class="mt-8" justify="center" align="cetner" cols="12">
+      <v-row class="mt-8" justify="center" cols="12">
         <v-col>
           <div align="center">
             <v-img
               width="50%"
-              :src="require('../../static/pictures/programmerCOLOR.svg')"
+              :src="require('../../static/pictures/manCOLOR.svg')"
               contain
             />
           </div>
@@ -264,16 +343,16 @@
 
           <!-- Project Cards -->
           <v-row cols="12" class="mb-12" justify="center">
-            <v-cols v-for="project in projects" :key="project.name">
-              <projectCard
+            <div v-for="project in projects" :key="project.name">
+              <ProjectCard
                 :title="project.name"
                 :text="project.text"
                 :image="project.image"
                 :button="project.button"
                 :link="project.link"
-                width="350"
+                :width="350"
               />
-            </v-cols>
+            </div>
           </v-row>
         </v-card>
       </v-row>
@@ -321,7 +400,8 @@
 
 <script>
 import "@mdi/font/css/materialdesignicons.css"; // Ensure you are using css-loader
-import projectCard from "../../static/objects/projectCard.vue";
+import ProjectCard from "../../static/objects/projectCard.vue";
+import Job from "../../static/objects/job.vue";
 
 export default {
   name: "Home",
@@ -330,8 +410,19 @@ export default {
     document.title = "Aidan Mackey | Programmer, Student, & Intern";
   },
 
+  methods: {
+    isExtraSmall() {
+      if (this.$vuetify.breakpoint.name == 'xs') {
+        return true;
+      }
+
+      return false;
+    }
+  },
+
   components: {
-    projectCard,
+    ProjectCard,
+    Job,
   },
 
   icons: {
@@ -339,6 +430,8 @@ export default {
   },
 
   data: () => ({
+    testText: "A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.",
+
     name: "Aidan Mackey",
     buttons: [
       {
@@ -371,6 +464,33 @@ export default {
 
     AboutMeText:
       "Thank you for visiting my website! Since beginning my journey as a programmer in high school, I have worked with school IT departments, startups, and big tech companies; as well as worked along side many talented individuals that have helped me to grow in my teamwork and programming skills. I have become quite skilled in Full-Stack Website Development, Software Engineering, and Development Operations. I am a very hardworking person and am always looking for new technologies to learn.",
+
+    Roadmap: [
+      { 
+        job: "Santa Margarita High School", 
+        title: "IT Intern & Consultant", 
+        info: "Worked in a high school’s IT department as an intern during the summer, and then consultant during the school year. I resolved computer issues by replacing defective components and troubleshooting software problems and prepared the computers, projectors, Wi-Fi nodes and various other devices for the upcoming school year.",
+        when: "2016 - 2019",
+      },
+      { 
+        job: "INRIX", 
+        title: "Software Development Engineer Intern", 
+        info: "Pitched a hackathon product to INRIX and further developed it with their high-density data into their SaaS suite of products. The product was a road map that displayed danger hopspots, with the intended purpose of giving this data to first responderes to improve response time. Over the summer, I improved the algorithm and customer-facing UI with INRIX data scientists and filed a patent for this technology. During my time here I contributed code to a map tile providing server that is used worldwide by millions of users.",
+        when: "Summer 2020",
+      },
+      { 
+        job: "Panterix", 
+        title: "Founder, CFO, and Software Engineer", 
+        info: "Started a business with a product that globally ranks roads on their safety. I Participated in undergraduate research and published a paper at the Good Techs conference with a university professor. Personall, I am developing the consumer facing website in Vue JS and mobile application in React Native as well as the backend API's with Microsoft's ASP.NET product.",
+        when: "February 2020 - Present",
+      },
+      { 
+        job: "INRIX", 
+        title: "Software Development Engineer Intern & Product Manger", 
+        info: "Returning software engineer with more responsibility as a product manager. I will be responsible for my team reaching project milestones as well as staying organized. I will be working on the DaaS team, working with API's in Java and C#.",
+        when: "Summer 2021",
+      },
+    ],
 
     Header1: "Programmer",
     Header2: "Website Developer",
