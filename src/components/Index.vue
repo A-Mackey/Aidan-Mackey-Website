@@ -98,11 +98,7 @@
       >
         <v-card-title
             class="text-center justify-center black--text mt-12 mb-5"
-            style="
-                font-family: 'Roboto'; 
-                font-weight: 400;
-                font-size: 3em;
-              "
+            :class=" isExtraSmall() ? 'roadMapTitleXS' : 'roadMapTitle'"
           >
             My Work Experience
           </v-card-title>
@@ -590,3 +586,17 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+  .roadMapTitleXS {
+    font-family: 'Roboto'; 
+    font-weight: 400;
+    font-size: 2em;
+  }
+
+  .roadMapTitle {
+    font-family: 'Roboto'; 
+    font-weight: 400;
+    font-size: 3em;
+  }
+</style>
