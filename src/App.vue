@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <router-view>
     <!-- Could add 'app' to make it scroll witth page -->
     <v-app-bar color="primary" light>
       <v-spacer />
@@ -32,6 +33,7 @@
     <v-main>
       <Index />
     </v-main>
+    </router-view>
   </v-app>
 </template>
 
