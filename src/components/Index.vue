@@ -465,16 +465,10 @@ export default {
     RoadMapHeader: "My Experience",
     Roadmap: [
       { 
-        job: "Santa Margarita High School", 
-        title: "IT Intern & Consultant", 
-        info: "Worked in a high school’s IT department as an intern during the summer, and then consultant during the school year. I resolved computer issues by replacing defective components and troubleshooting software problems and prepared the computers, projectors, Wi-Fi nodes and various other devices for the upcoming school year.",
-        when: "2016 - 2019",
-      },
-      { 
         job: "INRIX", 
-        title: "Software Development Engineer Intern", 
-        info: "Pitched a hackathon product to INRIX and further developed it with their high-density data into their SaaS suite of products. The product was a road map that displayed danger hopspots, with the intended purpose of giving this data to first responderes to improve response time. Over the summer, I improved the algorithm and customer-facing UI with INRIX data scientists and filed a patent for this technology. During my time here I contributed code to a map tile providing server that is used worldwide by millions of users.",
-        when: "Summer 2020",
+        title: "Software Development Engineer & Product Manger", 
+        info: "Returning software engineer with more responsibility as a product manager. I will be responsible for my team reaching project milestones as well as staying organized. I will be working on the DaaS team, working with API's in Java and C#.",
+        when: "Summer 2021",
       },
       { 
         job: "Panterix", 
@@ -484,9 +478,15 @@ export default {
       },
       { 
         job: "INRIX", 
-        title: "Software Development Engineer Intern & Product Manger", 
-        info: "Returning software engineer with more responsibility as a product manager. I will be responsible for my team reaching project milestones as well as staying organized. I will be working on the DaaS team, working with API's in Java and C#.",
-        when: "Summer 2021",
+        title: "Software Development Engineer Intern", 
+        info: "Pitched a hackathon product to INRIX and further developed it with their high-density data into their SaaS suite of products. The product was a road map that displayed danger hopspots, with the intended purpose of giving this data to first responderes to improve response time. Over the summer, I improved the algorithm and customer-facing UI with INRIX data scientists and filed a patent for this technology. During my time here I contributed code to a map tile providing server that is used worldwide by millions of users.",
+        when: "Summer 2020",
+      },
+      { 
+        job: "Santa Margarita High School", 
+        title: "IT Intern & Consultant", 
+        info: "Worked in a high school’s IT department as an intern during the summer, and then consultant during the school year. I resolved computer issues by replacing defective components and troubleshooting software problems and prepared the computers, projectors, Wi-Fi nodes and various other devices for the upcoming school year.",
+        when: "2016 - 2019",
       },
     ],
 
@@ -514,6 +514,7 @@ export default {
       { site: "INRIX Scorecard" },
       { site: "Panterix.com" },
       { site: "AidanMackey.net" },
+      { site: "IGCaptions.online" },
     ],
 
     projects: [
